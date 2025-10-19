@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="port.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />">
+
+
+</head>
+
+<body>
+  <header class="navbar">
+
+    <img src="logo3.jpeg" alt="">
+
+    <div class="link">
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Project">Project</a>
+      <a href="#Contact">Contact</a>
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+  <script>
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+
+      if (window.scrollY > lastScrollY && window.scrollY > 50) {
+        navbar.classList.add('hide');  // scrolling down
+      } else {
+        navbar.classList.remove('hide'); // scrolling up
+      }
+
+      lastScrollY = window.scrollY; // last scroll position
+    });
+  </script>
+
+
+  <div id="Home" class="bodyy">
+
+
+    <div>
+      <h1 class="name">Hi, <br>Iam, <br>Abhishek Mandal</h1>
+      <p class="dist">UI/UX designer</p>
+    </div>
+    <div class="me-img">
+      <img src="me.jpeg" alt="">
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <section id="About" class="hero">
+    <div class="intro">
+      <p>Hyy 👋</p>
+      <h1>I'm <span>Abhishek Mandal</span></h1>
+      <p class="subtitle">Currently learning <strong>UI Development</strong></p>
+      <p>I'm fond of playing <strong>cricket</strong> 🏏 and love to <strong>code</strong> 💻</p>
+    </div>
+  </section>
+
+
+
+
+
+  <script>
+    // Improved IntersectionObserver for replayable animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.8 // Trigger when 20% visible
+    });
+
+    document.querySelectorAll('.intro').forEach((el) => observer.observe(el));
+  </script>
+
+
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('page-loaded');
+    });
+  </script>
+
+  <div id="Project">
+    <div class="box1">
+      <h3>Project One</h3>
+      <p> Its a company’s landing pagebr
+        that sounds modern and appealing for a tech/AI/web development business.</p>
+      <a href="https://www.aivine.tech/" class="btn">View Project</a>
+    </div>
+
+    <div class="box2">
+      <h3>Project Two</h3>
+      <p>A clean and modern layout using CSS <br> grid and hover animations for professional for a 'Invitations CARD'
+      </p>
+      <a href="invitationcard.html" class="btn">View Project</a>
+    </div>
+
+    <div class="box3">
+      <h3>Project Three</h3>
+      <p>This project demonstrates HTML & CSS skills with gradient effects of a 'PRICING!'.</p>
+      <a href="pricing.html" class="btn">View Project</a>
+    </div>
+
+    <!-- <div class="icon">
+      <div class="icon1">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="icon2">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+      </div>
+      <div class="icon3">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+       
+      <div class="icon4">
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div> -->
+
+
+
+
+  </div>
+
+
+
+
+  <!-- <div class="icon-class">
+  <div class="icon1">
+      <i class="fa-brands fa-facebook"></i>
+  </div>
+
+
+  <div class="icon2">
+
+  </div>
+
+
+  <div class="icon3">
+
+  </div>
+
+
+  <div class="icon4">
+
+  </div> -->
+  <footer id="Contact" class="foot">
+
+
+
+
+    </div>
+    <div class="profile">
+      Want to collaborate or work with us?
+      Schedule <br> a 15-minute meeting on our website 👇 <br>
+      <a class="aivine" href="https://www.aivine.tech/">aivine.tech</a>
+    </div>
+    <div class="copyright">
+      <p>
+      <p style="color: blueviolet;">© 2025</p>Abhishek Mandal. <br> All rights reserved.</p>
+    </div>
+
+    <div class="all-icon">
+      <p class="call-me"> DM for collaboration and for services <br> <br>
+        <a href="https://www.facebook.com/share/1BPzr7zy8Q/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/for-you-abhi"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/abhishek_imm/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/abhishek-kumar-mandal-81086b293"><i class="fa-brands fa-linkedin"></i></a>
+      </p>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
